@@ -1,0 +1,13 @@
+.page-city {
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__text {
+		@include text14;
+		display: block;
+		max-width: 338px;
+		margin: 0 auto 32px;
+		text-align: center;
+	}
+}

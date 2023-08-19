@@ -1,0 +1,14 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Определение города"
+	- page = "page-city"
+
+block content
+	h1.title.page-city__title Определение города
+	p.page-city__text Ваш город будет определен автоматически по геолокации, вы сможете изменить город в настройках профиля после завершения регистрации.
+	button.button.button--pink.w-100 Определить местоположение
+
