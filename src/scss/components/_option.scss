@@ -1,0 +1,36 @@
+.option {
+	cursor: pointer;
+
+	&__input {
+		display: none;
+	}
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		padding: 13px 24px 12px;
+		background-color: $color-gray-light;
+		font-size: 20px;
+		line-height: 1;
+		color: $color-white;
+		transition: color $transition-default, background-color $transition-default;
+
+		.option__input:checked + & {
+			background-color: $color-pink;
+		}
+	}
+
+	&__icon {
+		width: 24px;
+		height: 24px;
+		margin-left: 10px;
+		opacity: 0;
+		transition: opacity $transition-default;
+
+		.option__input:checked + .option__text & {
+			opacity: 1;
+		}
+	}
+}

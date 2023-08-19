@@ -1,0 +1,46 @@
+// Mixins
+
+@mixin title {
+	font-size: 32px;
+	line-height: 39px;
+	font-weight: 500;
+}
+
+@mixin text23-medium {
+	font-size: 23px;
+	line-height: 27px;
+	font-weight: 500;
+}
+
+@mixin text16 {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+@mixin text16-medium {
+	@include text16;
+	font-weight: 500;
+}
+
+@mixin text14 {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+@mixin text11 {
+	font-size: 11px;
+	line-height: 16px;
+}
+
+body {
+	font-family: $font-primary;
+}
+
+input, button, textarea {
+	font-family: inherit;
+}
+
+.title {
+	@include title;
+	text-align: center;
+}

@@ -1,0 +1,22 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Выберите пол"
+	- page = "page-choose-gender"
+
+block content
+	h1.title.page-choose-gender__title Выберите пол
+	.page-choose-gender__option-box
+		label.option
+			input.option__input(type="radio", name="gender", checked)
+			span.option__text Женщина
+				+svg("check-circle")(class="option__icon")
+		label.option
+			input.option__input(type="radio", name="gender")
+			span.option__text Мужчина
+				+svg("check-circle")(class="option__icon")
+	button.button.button--pink.w-100 Продолжить
+

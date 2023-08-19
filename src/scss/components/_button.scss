@@ -1,0 +1,29 @@
+.button {
+	@include text16;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid $color-pink;
+	border-radius: 8px;
+	padding: 14px 24px 13px;
+	text-transform: uppercase;
+	transition: color $transition-default, background-color $transition-default, border-color $transition-default;
+
+	&:hover {
+	}
+
+	&__icon {
+	}
+
+	&--pink {
+		@include shadow;
+		background-color: $color-pink;
+		color: $color-white;
+
+		&:disabled {
+			background-color: $color-gray-light;
+			border-color: $color-gray-light;
+			box-shadow: none;
+		}
+	}
+}

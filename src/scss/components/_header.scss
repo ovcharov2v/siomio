@@ -1,0 +1,50 @@
+.header {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: $color-white;
+	border-radius: 8px 8px 0 0;
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__cancel-btn {
+		display: inline-block;
+		font-size: 16px;
+		line-height: 19px;
+		font-weight: 500;
+		color: $color-blue;
+	}
+
+	&__text-block {
+		flex-grow: 1;
+		text-align: center;
+		padding-right: 19px;
+	}
+
+	&__title {
+		@include text16-medium;
+	}
+
+	&__text {
+		font-size: 12px;
+		line-height: 15px;
+		color: #858585;
+	}
+
+	&__menu-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 42px;
+		height: 42px;
+		//transform: translateX(11px);
+	}
+
+	&__menu-btn-icon {
+		width: 20px;
+		height: 20px;
+	}
+}

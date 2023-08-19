@@ -1,0 +1,11 @@
+.page-choose-gender {
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__option-box {
+		display: grid;
+		grid-row-gap: 8px;
+		margin-bottom: 32px;
+	}
+}
