@@ -1,0 +1,18 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "День рождения"
+	- page = "page-birthday"
+
+block content
+	h1.title.page-birthday__title Мой день рождения
+	.page-birthday__input-box
+		label.page-birthday__label(for="birthday") Месяц/день/год
+		input.page-birthday__input#birthday(type="text")
+	p.page-birthday__hint Ваш возраст будет виден всем.
+
+	button.button.button--pink.w-100(disabled) Продолжить
+

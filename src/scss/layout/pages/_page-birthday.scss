@@ -1,0 +1,46 @@
+.page-birthday {
+	&__title {
+		margin-bottom: 32px;
+	}
+
+	&__input-box {
+		position: relative;
+		margin-bottom: 8px;
+	}
+
+	&__label {
+		position: absolute;
+		top: 10px;
+		left: 20px;
+		font-size: 11px;
+		line-height: 13px;
+		color: #9B9B9B;
+	}
+
+	&__input {
+		display: block;
+		padding: 26px 56px 12px 20px;
+		border: none;
+		font-size: 20px;
+		line-height: 1;
+		background-color: $color-white;
+		border-radius: 4px;
+		box-shadow: 0 0 20px rgba($color-black, .08);
+	}
+
+	&__hint {
+		margin-bottom: 32px;
+		font-size: 14px;
+		line-height: 20px;
+		text-align: center;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 20px;
+		width: 24px;
+		height: 24px;
+	}
+}
