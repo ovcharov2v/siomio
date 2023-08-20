@@ -5,7 +5,7 @@
 	align-items: center;
 	border: 1px solid $color-pink;
 	border-radius: 8px;
-	padding: 14px 24px 13px;
+	padding: 14px 16px 13px;
 	text-transform: uppercase;
 	transition: color $transition-default, background-color $transition-default, border-color $transition-default;
 
@@ -13,6 +13,9 @@
 	}
 
 	&__icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 4px;
 	}
 
 	&--pink {
@@ -25,5 +28,10 @@
 			border-color: $color-gray-light;
 			box-shadow: none;
 		}
+	}
+
+	&--small-text {
+		@include text14;
+		box-shadow: none;
 	}
 }

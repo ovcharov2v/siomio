@@ -1,0 +1,29 @@
+.page-register-complete {
+	&__img {
+		display: block;
+		width: 100%;
+		max-width: 200px;
+		margin: 0 auto 16px;
+	}
+
+	&__title {
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		@include text14;
+		margin-bottom: 32px;
+		text-align: center;
+	}
+
+	&__button-grid {
+		display: grid;
+		grid-row-gap: 8px;
+	}
+
+	&__grid-two-col {
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		grid-gap: 8px;
+	}
+}

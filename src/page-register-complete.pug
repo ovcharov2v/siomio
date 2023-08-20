@@ -1,0 +1,34 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Регистрация успешно завершена"
+	- page = "page-register-complete"
+
+block content
+	img.page-register-complete__img(src="images/register-complete-img.svg", alt)
+	h1.title.page-register-complete__title Регистрация успешно завершена
+	p.page-register-complete__text выберите  поиск для просмотра анкет
+	.page-register-complete__button-grid
+		.page-register-complete__grid-two-col
+			button.button.button--pink.button--small-text.w-100
+				+svg("search")(class="button__icon")
+				|Поиск
+			button.button.button--pink.button--small-text.w-100
+				+svg("star")(class="button__icon")
+				| Онлайн чаты
+			button.button.button--pink.button--small-text.w-100
+				+svg("smile")(class="button__icon")
+				| Моя анкета
+			button.button.button--pink.button--small-text.w-100
+				+svg("crown")(class="button__icon")
+				| Премиум
+		button.button.button--pink.button--small-text.w-100
+			+svg("gear")(class="button__icon")
+			|Настройки поиска
+		button.button.button--pink.button--small-text.w-100
+			+svg("bell")(class="button__icon")
+			|Уведомления - 12
+
