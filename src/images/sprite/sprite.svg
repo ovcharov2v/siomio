@@ -1,4 +1,8 @@
 <svg width="0" height="0" class="hidden">
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="camera">
+		<path d="M3 9C3 7.89543 3.89543 7 5 7H6.5C7.12951 7 7.72229 6.70361 8.1 6.2L9.15 4.8C9.52771 4.29639 10.1205 4 10.75 4H13.25C13.8795 4 14.4723 4.29639 14.85 4.8L15.9 6.2C16.2777 6.70361 16.8705 7 17.5 7H19C20.1046 7 21 7.89543 21 9V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+		<circle cx="12" cy="13" r="4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
+	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="check">
 		<path d="M7 13L10 16L17 9" stroke="#2AA952" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
@@ -15,23 +19,10 @@
 		<path d="M8 8L16 16" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 		<path d="M16 8L8 16" stroke="#FF0000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 65" id="cross-circle">
-		<g filter="url(#filter0_d_114_4130)">
-			<rect x="8" y="4.5" width="48" height="48" rx="24" fill="#F75777"></rect>
-		</g>
-		<path d="M26.353 22.853L37.6471 34.1471" stroke="white" stroke-width="2.82353" stroke-linecap="round" stroke-linejoin="round"></path>
-		<path d="M37.647 22.853L26.3529 34.1471" stroke="white" stroke-width="2.82353" stroke-linecap="round" stroke-linejoin="round"></path>
-		<defs>
-			<filter id="filter0_d_114_4130" x="9.53674e-07" y="0.5" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-				<feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-				<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
-				<feOffset dy="4"></feOffset>
-				<feGaussianBlur stdDeviation="4"></feGaussianBlur>
-				<feColorMatrix type="matrix" values="0 0 0 0 0.829167 0 0 0 0 0.148559 0 0 0 0 0.148559 0 0 0 0.25 0"></feColorMatrix>
-				<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_114_4130"></feBlend>
-				<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_114_4130" result="shape"></feBlend>
-			</filter>
-		</defs>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 49" id="cross-circle">
+		<rect y="0.5" width="48" height="48" rx="24" fill="#F75777"></rect>
+		<path d="M18.353 18.853L29.6471 30.1471" stroke="white" stroke-width="2.82353" stroke-linecap="round" stroke-linejoin="round"></path>
+		<path d="M29.647 18.853L18.3529 30.1471" stroke="white" stroke-width="2.82353" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 20" id="crown">
 		<path d="M5.22201 15.2993C4.66065 15.2993 4.17733 14.903 4.06724 14.3526L1.96023 3.8175C1.76619 2.8473 2.9483 2.21465 3.64791 2.91427L7.20066 6.46702L11.7929 1.87478C12.1834 1.48426 12.8166 1.48426 13.2071 1.87478L17.7993 6.46702L21.3521 2.91427C22.0517 2.21465 23.2338 2.8473 23.0398 3.8175L20.9328 14.3526C20.8227 14.903 20.3393 15.2993 19.778 15.2993H5.22201Z" stroke="white" stroke-width="2"></path>
@@ -100,12 +91,12 @@
 		<circle cx="14.5" cy="9.5" r="1.5" fill="white"></circle>
 		<path d="M16.462 14.3936C15.2069 15.4319 13.6289 16 12 16C10.3711 16 8.79315 15.4319 7.53803 14.3936" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="star">
-		<path d="M11.0489 4.92705C11.3483 4.00574 12.6517 4.00574 12.9511 4.92705L14.2451 8.90983C14.379 9.32185 14.763 9.60081 15.1962 9.60081H19.3839C20.3527 9.60081 20.7554 10.8404 19.9717 11.4098L16.5838 13.8713C16.2333 14.126 16.0866 14.5773 16.2205 14.9894L17.5146 18.9721C17.8139 19.8934 16.7595 20.6596 15.9757 20.0902L12.5878 17.6287C12.2373 17.374 11.7627 17.374 11.4122 17.6287L8.02426 20.0902C7.24054 20.6596 6.18607 19.8934 6.48542 18.9721L7.7795 14.9894C7.91338 14.5773 7.76672 14.126 7.41623 13.8713L4.02827 11.4098C3.24456 10.8404 3.64734 9.60081 4.61606 9.60081H8.8038C9.23703 9.60081 9.62099 9.32185 9.75486 8.90983L11.0489 4.92705Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 25" id="video">
 		<path d="M4 15.5V9.5C4 8.39543 4.89543 7.5 6 7.5H13C14.1046 7.5 15 8.39543 15 9.5V15.5C15 16.6046 14.1046 17.5 13 17.5H6C4.89543 17.5 4 16.6046 4 15.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 		<path d="M18.3753 8.79976L15.3753 11.1998C15.1381 11.3895 15 11.6768 15 11.9806V13.0194C15 13.3232 15.1381 13.6105 15.3753 13.8002L18.3753 16.2002C19.0301 16.7241 20 16.2579 20 15.4194V9.58062C20 8.74212 19.0301 8.27595 18.3753 8.79976Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="star">
+		<path d="M11.0489 4.92705C11.3483 4.00574 12.6517 4.00574 12.9511 4.92705L14.2451 8.90983C14.379 9.32185 14.763 9.60081 15.1962 9.60081H19.3839C20.3527 9.60081 20.7554 10.8404 19.9717 11.4098L16.5838 13.8713C16.2333 14.126 16.0866 14.5773 16.2205 14.9894L17.5146 18.9721C17.8139 19.8934 16.7595 20.6596 15.9757 20.0902L12.5878 17.6287C12.2373 17.374 11.7627 17.374 11.4122 17.6287L8.02426 20.0902C7.24054 20.6596 6.18607 19.8934 6.48542 18.9721L7.7795 14.9894C7.91338 14.5773 7.76672 14.126 7.41623 13.8713L4.02827 11.4098C3.24456 10.8404 3.64734 9.60081 4.61606 9.60081H8.8038C9.23703 9.60081 9.62099 9.32185 9.75486 8.90983L11.0489 4.92705Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 	</symbol>
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" id="attention">
 		<path d="M3.51842 16.9673L10.2011 5.08709C10.5515 4.46408 11.4485 4.46408 11.7989 5.08709L18.4816 16.9673C18.8253 17.5784 18.3837 18.3334 17.6826 18.3334H4.31736C3.61627 18.3334 3.1747 17.5784 3.51842 16.9673Z" stroke="white" stroke-width="1.83333" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -116,9 +107,5 @@
 		<path d="M5.82474 13.934L5.09976 13.2452L5.82474 13.934ZM8 9C8 6.79086 9.79086 5 12 5V3C8.68629 3 6 5.68629 6 9H8ZM8 11.7564V9H6V11.7564H8ZM6 16C6 15.4658 6.20812 14.9823 6.54971 14.6228L5.09976 13.2452C4.41915 13.9616 4 14.9329 4 16H6ZM7 16H6V18H7V16ZM17 16H7V18H17V16ZM18 16H17V18H18V16ZM17.4503 14.6228C17.7919 14.9823 18 15.4658 18 16H20C20 14.9329 19.5809 13.9616 18.9002 13.2452L17.4503 14.6228ZM16 9V11.7564H18V9H16ZM12 5C14.2091 5 16 6.79086 16 9H18C18 5.68629 15.3137 3 12 3V5ZM18.9002 13.2452C18.2923 12.6054 18 12.1579 18 11.7564H16C16 13.05 16.8905 14.0336 17.4503 14.6228L18.9002 13.2452ZM4 16C4 17.1046 4.89543 18 6 18V16H4ZM18 18C19.1046 18 20 17.1046 20 16H18V18ZM6 11.7564C6 12.1579 5.70766 12.6054 5.09976 13.2452L6.54971 14.6228C7.10947 14.0336 8 13.05 8 11.7564H6Z" fill="white"></path>
 		<path d="M13.7976 19.8767C13.6312 20.2179 13.3712 20.5046 13.048 20.7035C12.7247 20.9023 12.3516 21.0051 11.9721 20.9998C11.5926 20.9945 11.2224 20.8813 10.9049 20.6735C10.5873 20.4657 10.3354 20.1718 10.1786 19.8262" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
 		<path d="M12 3V4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="camera">
-		<path d="M3 9C3 7.89543 3.89543 7 5 7H6.5C7.12951 7 7.72229 6.70361 8.1 6.2L9.15 4.8C9.52771 4.29639 10.1205 4 10.75 4H13.25C13.8795 4 14.4723 4.29639 14.85 4.8L15.9 6.2C16.2777 6.70361 16.8705 7 17.5 7H19C20.1046 7 21 7.89543 21 9V18C21 19.1046 20.1046 20 19 20H5C3.89543 20 3 19.1046 3 18V9Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-		<circle cx="12" cy="13" r="4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></circle>
 	</symbol>
 </svg>

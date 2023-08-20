@@ -1,0 +1,30 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Добавьте фото/видео"
+	- page = "page-photo"
+
+block content
+	h1.title.page-photo__title Добавьте
+		br
+		|фото/видео
+	p.page-photo__text Добавьте хотя бы 1 фото или короткое видео, чтобы продолжить.
+	.swiper.page-photo__slider
+		.swiper-wrapper
+			// Slide
+			.swiper-slide.page-photo__slide.page-photo__slide--empty
+				.page-photo__photo-box
+			// Slide
+			.swiper-slide.page-photo__slide.page-photo__slide--empty
+				.page-photo__photo-box
+			// Slide
+			.swiper-slide.page-photo__slide.page-photo__slide--empty
+				.page-photo__photo-box
+	.page-photo__button-grid
+		button.button.button--pink.w-100 Добавить фото
+		button.button.button--pink.w-100 Добавить видео ( до 15сек. )
+		button.button.button--pink.w-100(disabled) Продолжить
+
