@@ -1,0 +1,8 @@
+.range {
+	&__text-box {
+		@include text16;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 26px;
+	}
+}

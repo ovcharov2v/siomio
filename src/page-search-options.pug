@@ -1,0 +1,45 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Параметры поиска"
+	- page = "page-search-options"
+
+block content
+	h1.title.page-search-options__title Параметры поиска
+	p.page-search-options__text Укажите параметра для поиска анкет, параметры в дальнейшем можно поменять в меню>настройки поиска
+	.range.range--age.page-search-options__age
+		.range__text-box
+			p.range__text Возраст
+			p.range__text
+				span.range__value-min
+				|
+				|
+				| -
+				|
+				|
+				span.range__value-max
+		.range__slider
+	p.page-search-options__opt-text Вам интересны
+	.page-search-options__opt-grid
+		label.option.option--checkbox
+			input.option__input(type="checkbox", name="gender", checked)
+			span.option__text Женщины
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox
+			input.option__input(type="checkbox", name="gender", checked)
+			span.option__text Мужчины
+				+svg("check-circle")(class="option__icon")
+	.range.range--distance.page-search-options__distance
+		.range__text-box
+			p.range__text Максимальное расстояние
+			p.range__text
+				span.range__value
+				|
+				|
+				| км.
+		.range__slider
+	button.button.button--pink.w-100 Сохранить
+

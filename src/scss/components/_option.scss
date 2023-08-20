@@ -13,24 +13,28 @@
 		padding: 13px 24px 12px;
 		background-color: $color-gray-light;
 		font-size: 20px;
-		line-height: 1;
+		line-height: 24px;
 		color: $color-white;
 		transition: color $transition-default, background-color $transition-default;
 
 		.option__input:checked + & {
 			background-color: $color-pink;
 		}
+
+		.option--checkbox & {
+			padding: 12px 18px 11px;
+			border-radius: 40px;
+		}
 	}
 
 	&__icon {
+		display: none;
 		width: 24px;
 		height: 24px;
 		margin-left: 10px;
-		opacity: 0;
-		transition: opacity $transition-default;
 
 		.option__input:checked + .option__text & {
-			opacity: 1;
+			display: block;
 		}
 	}
 }

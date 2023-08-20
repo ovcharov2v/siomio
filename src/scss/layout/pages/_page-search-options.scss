@@ -1,0 +1,38 @@
+.page-search-options {
+	&__title {
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		@include text14;
+		display: block;
+		max-width: 338px;
+		margin: 0 auto 32px;
+		text-align: center;
+	}
+
+	&__age {
+		margin-bottom: 32px;
+	}
+
+	&__opt-text {
+		@include text16;
+		margin-bottom: 16px;
+	}
+
+	&__opt-grid {
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		grid-column-gap: 8px;
+		margin-bottom: 32px;
+	}
+
+	&__distance {
+		margin-bottom: 32px;
+	}
+
+	&__button-grid {
+		display: grid;
+		grid-row-gap: 8px;
+	}
+}
