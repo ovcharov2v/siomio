@@ -30,6 +30,12 @@
 		}
 	}
 
+	&--pink-light {
+		background-color: #FC92A7;
+		border-color: #FC92A7;
+		color: $color-white;
+	}
+
 	&--small-text {
 		@include text14;
 		box-shadow: none;

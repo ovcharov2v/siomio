@@ -1,0 +1,64 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Тарифы"
+	- page = "page-tariffs"
+
+block content
+	h1.title.page-tariffs__title Получите SiomioPlus
+	.page-tariffs__description-grid
+		.page-tariffs__description
+			+svg("earth")(class="page-tariffs__description-icon")
+			p.page-tariffs__description-text Измените свое место.
+				br
+				|Находите пары по всему миру.
+		.page-tariffs__description
+			+svg("envelope")(class="page-tariffs__description-icon")
+			p.page-tariffs__description-text Ставьте больше отметок “суперлайк”.
+				br
+				|Выразите совю симпатию.
+		.page-tariffs__description
+			+svg("filter")(class="page-tariffs__description-icon")
+			p.page-tariffs__description-text Выключите рекламу. Ничего не будет отвлекать.
+	.swiper.page-tariffs__slider
+		.swiper-wrapper
+			// Slide
+			.swiper-slide
+				.page-tariffs__slide.page-tariffs__slide--bg1
+					.page-tariffs__slide-content
+						+svg("crown2")(class="page-tariffs__slide-crown")
+						.page-tariffs__slide-center
+							p.page-tariffs__slide-value 1
+							p.page-tariffs__slide-time месяц
+						.page-tariffs__slide-bottom
+							p.page-tariffs__slide-price 1490 P/мес.
+			// Slide
+			.swiper-slide
+				.page-tariffs__slide.page-tariffs__slide--bg2
+					.page-tariffs__slide-content
+						+svg("crown2")(class="page-tariffs__slide-crown")
+						.page-tariffs__slide-center
+							p.page-tariffs__slide-value 6
+							p.page-tariffs__slide-time месяцев
+						.page-tariffs__slide-bottom
+							p.page-tariffs__slide-discount -20%
+							p.page-tariffs__slide-price 965 P/мес.
+			// Slide
+			.swiper-slide
+				.page-tariffs__slide.page-tariffs__slide--bg3
+					.page-tariffs__slide-content
+						+svg("crown2")(class="page-tariffs__slide-crown")
+						.page-tariffs__slide-center
+							p.page-tariffs__slide-value 1
+							p.page-tariffs__slide-time месяц
+						.page-tariffs__slide-bottom
+							p.page-tariffs__slide-discount -35%
+							p.page-tariffs__slide-price 1490 P/мес.
+
+	.page-tariffs__buttons-grid
+		button.button.button--pink-light.button--small-text Отмена
+		button.button.button--pink.button--small-text Подписаться
+
