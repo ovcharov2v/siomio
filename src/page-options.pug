@@ -1,0 +1,35 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Все настройки"
+	- page = "page-options"
+
+block content
+	h1.title.page-options__title Все настройки
+	p.page-options__text Ваш город будет определен автоматически по геолокации, вы сможете изменить город в настройках профиля после завершения регистрации.
+	.page-options__button-grid
+		.page-options__grid-two-col
+			button.button.button--pink.button--small-text.w-100
+				+svg("smile2")(class="button__icon")
+				|Пол
+			button.button.button--pink.button--small-text.w-100
+				+svg("smile2")(class="button__icon")
+				| интересы
+			button.button.button--pink.button--small-text.w-100
+				+svg("smile")(class="button__icon")
+				| Имя
+			button.button.button--pink.button--small-text.w-100
+				+svg("camera")(class="button__icon")
+				| Фото/видео
+			button.button.button--pink.button--small-text.w-100
+				+svg("hourglass")(class="button__icon")
+				| возраст
+			button.button.button--pink.button--small-text.w-100
+				+svg("content")(class="button__icon")
+				| тест анкеты
+		button.button.button--pink.button--small-text.w-100
+			+svg("male")(class="button__icon")
+			|местоположение
