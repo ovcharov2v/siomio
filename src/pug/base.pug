@@ -282,8 +282,9 @@ html(class=html.classList)&attributes(html.attrs)
 	body(class=body.classList)&attributes(body.attrs)
 		+header()
 		block body-start
-		main.main.container(class=page)
-			block content
+		main.main(class=page)
+			.container
+				block content
 		+footer()
 		include ../images/sprite/sprite.svg
 		block scripts

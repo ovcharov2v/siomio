@@ -6,9 +6,7 @@
 	&__text {
 		@include text14;
 		text-align: center;
-		width: 100%;
-		max-width: 338px;
-		margin: 0 auto 32px;
+		margin-bottom: 32px;
 	}
 
 	&__options-grid {

@@ -1,0 +1,26 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Добавьте фото"
+	- page = "page-add-photo"
+
+block content
+	h1.title.page-add-photo__title Добавьте фото
+	p.page-add-photo__text Важно что бы на фото было видно лицо.
+		br
+		|Запрещена- реклама, спам и порнография
+	.page-add-photo__grid
+		- var n = 1
+		while n <= 6
+			.page-add-photo__elem-box
+				img.page-add-photo__elem-photo(src="images/photo"+n+".jpg", alt)
+				button.page-add-photo__elem-button
+					+svg("cross-circle")(class="page-add-photo__elem-button-icon")
+			- n++
+	.page-add-photo__buttons-grid
+		button.button.button--pink.w-100 Добавить фото
+		button.button.button--pink.w-100 Готово
+

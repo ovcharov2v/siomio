@@ -1,9 +1,14 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	min-width: 375px;
 	min-height: 100vh;
-	overflow-x: hidden;
 	-webkit-font-smoothing: antialiased;
 	background-color: $color-white;
 	color: $color-black;
@@ -16,7 +21,6 @@ body {
 	justify-content: center;
 	padding-top: 32px;
 	padding-bottom: 32px;
-	overflow: hidden;
 }
 
 button {

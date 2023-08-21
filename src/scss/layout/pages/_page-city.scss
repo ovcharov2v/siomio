@@ -5,9 +5,7 @@
 
 	&__text {
 		@include text14;
-		display: block;
-		max-width: 338px;
-		margin: 0 auto 32px;
+		margin-bottom: 32px;
 		text-align: center;
 	}
 }
