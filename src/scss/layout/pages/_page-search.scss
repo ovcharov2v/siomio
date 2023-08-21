@@ -1,0 +1,19 @@
+.page-search {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&__action-panel {
+		margin-top: -8px;
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		@include text14;
+		display: block;
+		width: 100%;
+		max-width: 338px;
+		margin: 0 auto;
+		text-align: center;
+	}
+}

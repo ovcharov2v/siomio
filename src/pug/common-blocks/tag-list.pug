@@ -1,0 +1,5 @@
+mixin tagList()
+	- var elems = ['Спорт', 'Кино', 'Отношения', 'Дружба', 'Путешествия']
+	ul.tag-list
+		each el in elems
+			li.tag-list__elem= el

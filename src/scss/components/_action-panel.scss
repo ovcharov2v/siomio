@@ -1,0 +1,54 @@
+.action-panel {
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	padding: 8px;
+	background-color: $color-white;
+	border-radius: 38px;
+
+	&__button {
+		@include shadow;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 48px;
+		height: 48px;
+		margin: 0 4px;
+		border-radius: 50%;
+		background-color: $color-pink;
+		transition: background-color $transition-default;
+
+		&--small {
+			width: 34px;
+			height: 34px;
+			margin: 0 8px;
+		}
+
+		&--active {
+			background-color: #E44058;
+		}
+	}
+
+	&__button-icon {
+		width: 24px;
+		height: 24px;
+
+
+
+		&--dislike,
+		&--heart {
+			transform: translateY(2px);
+		}
+
+		&--attention {
+			 width: 21px;
+			 height: 21px;
+			 transform: translateY(-1px);
+		 }
+
+		&--return {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

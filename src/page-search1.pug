@@ -1,0 +1,14 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Поиск"
+	- page = "page-search"
+
+block content
+	+user()
+	+actionPanel()(class="page-search__action-panel")
+	p.page-search__text Выберите действие что-бы перейти к следующей анкете
+

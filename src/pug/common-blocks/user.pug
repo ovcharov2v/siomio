@@ -1,0 +1,19 @@
+mixin user(showText=false, showShortText=false, showTags=false)
+	.user&attributes(attributes)
+		.user__photo-box
+			.swiper.user__slider
+				.swiper-wrapper
+					img.user__photo.swiper-slide(src="images/search-photo1.jpg", alt)
+					img.user__photo.swiper-slide(src="images/search-photo2.jpg", alt)
+		.user__info-box
+			.user__info-top-row
+				p.user__name Алена, 35
+				p.user__location
+					+svg("point")(class="user__location-icon")
+					| Москва
+			if showShortText === true
+				p.user__text Увлекаюсь бегом, горными лыжами и другими видами спорта. А еще я работаю ветеринаром, свою работу люблю...
+			if showText === true
+				p.user__text Увлекаюсь бегом, горными лыжами и другими видами спорта. А еще я работаю ветеринаром, что делает меня еще более увлеченной в этой области. Если ты тоже любишь активный образ жизни и хочешь найти единомышленника, то я буду рада пообщаться с тобой!
+			if showTags === true
+				+tagList()(class="user__tag-list")

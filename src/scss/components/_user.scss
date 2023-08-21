@@ -1,0 +1,64 @@
+.user {
+	position: relative;
+	border-radius: 34px;
+	width: 100%;
+	max-width: 343px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	&__photo-box {
+	}
+
+	&__photo {
+		display: block;
+		width: 100%;
+		user-select: none;
+	}
+
+	&__info-box {
+		position: absolute;
+		z-index: 1;
+		pointer-events: none;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 16px 24px;
+		background-color: rgba(#EBEBEB, .5);
+		backdrop-filter: blur(2px)
+	}
+
+	&__info-top-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 8px;
+	}
+
+	&__name {
+		font-size: 23px;
+		line-height: 27px;
+		font-weight: 500;
+	}
+
+	&__location {
+		@include text14;
+		display: flex;
+		align-items: center;
+	}
+
+	&__location-icon {
+		width: 16px;
+		height: 16px;
+		margin-right: 2px;
+	}
+
+	&__text {
+		@include text14;
+		color: #6F6F6F;
+		margin-bottom: 8px;
+	}
+
+	&__tag-list {
+		margin-bottom: 8px;
+	}
+}

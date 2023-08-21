@@ -1,0 +1,12 @@
+mixin actionPanel()
+	.action-panel&attributes(attributes)
+		button.action-panel__button.action-panel__button--small
+			+svg("return")(class="action-panel__button-icon action-panel__button-icon--return")
+		button.action-panel__button
+			+svg("dislike")(class="action-panel__button-icon action-panel__button-icon--dislike")
+		button.action-panel__button
+			+svg("envelope")(class="action-panel__button-icon action-panel__button-icon--message")
+		button.action-panel__button
+			+svg("heart")(class="action-panel__button-icon action-panel__button-icon--heart")
+		button.action-panel__button.action-panel__button--small
+			+svg("attention")(class="action-panel__button-icon action-panel__button-icon--attention")
