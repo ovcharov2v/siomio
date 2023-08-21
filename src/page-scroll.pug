@@ -1,0 +1,17 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Прокрутка"
+	- page = "page-scroll"
+
+block content
+	.page-scroll__grid
+		+user(false, true)
+		+user(false, true)
+		+user(false, true)
+		+user(false, true)
+	+actionPanel()(class="page-scroll__action-panel")
+
