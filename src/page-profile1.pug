@@ -1,0 +1,30 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Моя анкета"
+	- page = "page-profile"
+
+block content
+	.page-profile__top
+		.page-profile__photo-box
+			img.page-profile__photo(src="images/profile-photo.jpg", alt)
+		p.page-profile__name Алена, 35
+	.page-profile__action-box
+		p.page-profile__action-title Добавьте дополнительную информацию
+		.page-profile__action-grid
+			button.button.button--pink.button--small-text
+				+svg("smile2")(class="button__icon")
+				|Интересы
+			button.button.button--pink.button--small-text
+				+svg("camera")(class="button__icon")
+				| Фото/видео
+			button.button.button--pink.button--small-text
+				+svg("content")(class="button__icon")
+				| Текст к анкете
+			button.button.button--pink.button--small-text
+				+svg("gear")(class="button__icon")
+				| Настройки
+

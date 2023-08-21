@@ -1,5 +1,5 @@
-mixin tagList()
+mixin tagList(oneLine=false)
 	- var elems = ['Спорт', 'Кино', 'Отношения', 'Дружба', 'Путешествия']
-	ul.tag-list
+	ul.tag-list(class=(oneLine?"tag-list--one-line":""))&attributes(attributes)
 		each el in elems
 			li.tag-list__elem= el

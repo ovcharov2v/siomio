@@ -3,6 +3,17 @@
 	flex-wrap: wrap;
 	margin: 0 -4px -5px;
 
+	&--one-line {
+		flex-wrap: nowrap;
+		width: 100%;
+		margin: 16px auto 0;
+		overflow-x: auto;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			width: 0;
+		}
+	}
+
 	&__elem {
 		@include text11;
 		margin: 0 4px 5px;
@@ -11,5 +22,9 @@
 		color: #6E6E6E;
 		text-transform: uppercase;
 		background-color: $color-white;
+
+		.tag-list--one-line & {
+			background-color: #E9F4FC;
+		}
 	}
 }
