@@ -1,0 +1,20 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Уведомления"
+	- page = "page-notification"
+
+block content
+	.page-notification__tab-row
+		a.page-notification__tab.page-notification__tab--active
+			+svg("heart2")(class="page-notification__tab-icon")
+			span Взаимные лайки (12)
+		a.page-notification__tab
+			+svg("heart3")(class="page-notification__tab-icon")
+			span Вас лайкнули (5)
+	+user(true, false, false, "type2")
+	+actionPanel()(class="page-notification__action-panel")
+

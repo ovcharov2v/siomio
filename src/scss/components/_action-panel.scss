@@ -1,10 +1,16 @@
 .action-panel {
+	position: relative;
 	z-index: 1;
 	display: flex;
-	align-items: center;
-	padding: 8px;
-	background-color: $color-white;
-	border-radius: 38px;
+	justify-content: center;
+
+	&__button-box {
+		display: flex;
+		align-items: center;
+		padding: 8px;
+		background-color: $color-white;
+		border-radius: 38px;
+	}
 
 	&__button {
 		@include shadow;
@@ -16,6 +22,7 @@
 		margin: 0 4px;
 		border-radius: 50%;
 		background-color: $color-pink;
+		color: $color-white;
 		transition: background-color $transition-default;
 
 		&--small {

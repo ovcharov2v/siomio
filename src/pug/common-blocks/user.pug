@@ -1,19 +1,68 @@
-mixin user(showText=false, showShortText=false, showTags=false)
-	.user&attributes(attributes)
+mixin user(showText=false, showShortText=false, showTags=false, labelType=false, blurred=false, scaled=false, photo="woman", showMessage=false, haveMessage=false)
+	-var userClass = ''
+	if blurred
+		- userClass = 'user--blurred'
+	if scaled
+		- userClass = 'user--scaled'
+	.user(class=userClass)&attributes(attributes)
 		.user__photo-box
-			.swiper.user__slider
-				.swiper-wrapper
-					img.user__photo.swiper-slide(src="images/search-photo1.jpg", alt)
-					img.user__photo.swiper-slide(src="images/search-photo2.jpg", alt)
-		.user__info-box
-			.user__info-top-row
-				p.user__name Алена, 35
-				p.user__location
-					+svg("point")(class="user__location-icon")
-					| Москва
-			if showShortText === true
-				p.user__text Увлекаюсь бегом, горными лыжами и другими видами спорта. А еще я работаю ветеринаром, свою работу люблю...
-			if showText === true
-				p.user__text Увлекаюсь бегом, горными лыжами и другими видами спорта. А еще я работаю ветеринаром, что делает меня еще более увлеченной в этой области. Если ты тоже любишь активный образ жизни и хочешь найти единомышленника, то я буду рада пообщаться с тобой!
-			if showTags === true
-				+tagList()(class="user__tag-list")
+			if !scaled
+				.swiper.user__slider
+					.swiper-wrapper
+						if photo === "woman"
+							img.user__photo.swiper-slide(src="images/search-photo1.jpg", alt)
+							img.user__photo.swiper-slide(src="images/search-photo2.jpg", alt)
+						if photo === "man-with-dog"
+							img.user__photo(src="images/photo-man-and-dog.jpg", alt)
+			if scaled
+				if photo === "woman"
+					img.user__photo(src="images/search-photo1.jpg", alt)
+				if photo === "man"
+					img.user__photo(src="images/search-photo3.jpg", alt)
+			if labelType !== false
+				p.user__label(class=(labelType==="type4"?"user__label--circle":""))
+					if labelType==="type1"
+						|Этот пользователь
+						br
+						|лайкнул вас
+						+svg("heart4")(class="user__label-icon")
+					if labelType === "type2"
+						|C этим пользователем
+						br
+						|у вас взаимные лайки
+						+svg("heart5")(class="user__label-icon")
+					if labelType === "type3"
+						| Этот пользователь лайкнул
+						br
+						|вас и написал сообщение
+						+svg("envelope")(class="user__label-icon")
+					if labelType === "type4"
+						+svg("envelope")(class="user__label-icon")
+			if showMessage === true
+				.user__message
+					.user__message-top
+						p.user__message-name Максим, 35
+						.user__message-wrapper
+							p.user__message-location
+								+svg("point")(class="user__message-location-icon")
+								|Москва
+							button.user__message-button
+								+svg("chevron-circle")(class="user__message-button-icon")
+					p.user__message-text Привет, Анна! Я Максим, и я хотел бы познакомиться с тобой поближе. Я думаю, мы могли бы стать отличными друзьями или даже больше, если ты тоже этого хочешь. Если у тебя есть время, давай пообщаемся и узнаем друг друга лучше.
+					time.user__message-time Сегодня в 18:03
+		if showMessage === false
+			.user__info-box
+				if haveMessage
+					button.user__chevron-button
+						+svg("chevron-circle")(class="user__chevron-button-icon")
+				.user__info-top-row
+					p.user__name Алена, 35
+					p.user__location
+						+svg("point")(class="user__location-icon")
+						| Москва
+				if showShortText === true
+					p.user__text Увлекаюсь бегом, горными лыжами и другими видами спорта. А еще я работаю ветеринаром, свою работу люблю...
+				if showText === true
+					p.user__text Увлекаюсь бегом, горными лыжами и другими видами спорта. А еще я работаю ветеринаром, что делает меня еще более увлеченной в этой области. Если ты тоже любишь активный образ жизни и хочешь найти единомышленника, то я буду рада пообщаться с тобой!
+				if showTags === true
+					+tagList()(class="user__tag-list")

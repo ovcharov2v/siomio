@@ -1,0 +1,51 @@
+.page-notification {
+	&__tab-row {
+		display: grid;
+		grid-template: auto / repeat(2, 1fr);
+		grid-column-gap: 8px;
+		margin-bottom: 24px;
+	}
+
+	&__tab {
+		@include text14;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4px 15px;
+		border: 1px solid $color-pink;
+		border-radius: 8px;
+		text-transform: uppercase;
+		color: $color-pink;
+		transition: background-color $transition-default, color $transition-default;
+
+		&--active {
+			color: $color-white;
+			background-color: $color-pink;
+		}
+	}
+
+	&__tab-icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 4px;
+		flex-shrink: 0;
+	}
+
+	&__action-panel {
+		margin-top: -8px;
+	}
+
+	&__text {
+		margin-bottom: 24px;
+		font-size: 22px;
+		line-height: 24px;
+		color: $color-pink;
+		text-align: center;
+	}
+
+	&__scale-container {
+		transform: scale(.6);
+		transform-origin: top center;
+		margin-bottom: -200px;
+	}
+}
