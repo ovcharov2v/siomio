@@ -1,0 +1,17 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Обо мне"
+	- page = "page-about"
+
+block content
+	h1.title.page-about__title Обо мне
+	p.page-about__text Важно- пиши чем хочешь заняться, че увлекаешься и тд.
+		br
+		|Запрещено - реклама, спам, ссылки, оскорбление и дискриминация.
+	textarea.page-about__textarea(placeholder="Текст...")
+	button.button.button--pink.w-100(disabled) Готово
+

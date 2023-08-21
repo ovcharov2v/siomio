@@ -1,0 +1,18 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Обо мне"
+	- page = "page-about"
+
+block content
+	h1.title.page-about__title Обо мне
+	p.page-about__text Важно- пиши чем хочешь заняться, че увлекаешься и тд.
+		br
+		|Запрещено - реклама, спам, ссылки, оскорбление и дискриминация.
+	textarea.page-about__textarea(placeholder="Текст...")
+		|Увлекаюсь бегом, горными лыжами и другими видами спорта. А еще я работаю ветеринаром. Если ты тоже любишь активный образ жизни и хочешь найти единомышленника, то я буду рада пообщаться с тобой!
+	button.button.button--pink.w-100 Готово
+
