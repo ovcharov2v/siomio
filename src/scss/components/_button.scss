@@ -34,4 +34,10 @@
 		@include text14;
 		box-shadow: none;
 	}
+
+	&--small {
+		@include text14;
+		padding: 11px 8px;
+		box-shadow: none;
+	}
 }

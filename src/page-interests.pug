@@ -1,0 +1,66 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Выберите интересы"
+	- page = "page-interests"
+
+block content
+	h1.title.page-interests__title Выберите интересы
+	p.page-interests__text Выберите интересы и мы сможем предложить вам пару со схожими интересами
+	.page-interests__options-grid
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox")
+			span.option__text Общение
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox", checked)
+			span.option__text Дружба
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox")
+			span.option__text Отношения
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox")
+			span.option__text Интим
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox", checked)
+			span.option__text Любовь
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox")
+			span.option__text ЛГБТ
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox", checked)
+			span.option__text Аниме
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox", checked)
+			span.option__text Кино
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox", checked)
+			span.option__text Музыка
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox")
+			span.option__text Мемы
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox", checked)
+			span.option__text Спорт
+				+svg("check-circle")(class="option__icon")
+		label.option.option--checkbox.option--text-small
+			input.option__input(type="checkbox")
+			span.option__text IT
+				+svg("check-circle")(class="option__icon")
+	.page-interests__button-grid
+		button.button.button--pink.button--small Убрать все
+		button.button.button--pink.button--small Выбрать все
+	button.button.button--pink.w-100 Сохранить
+
