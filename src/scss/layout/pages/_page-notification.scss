@@ -48,4 +48,36 @@
 		transform-origin: top center;
 		margin-bottom: -200px;
 	}
+
+	&__swipe-container {
+		position: relative;
+		max-width: 343px;
+		margin: 0 auto;
+
+		&::before {
+			display: block;
+			padding-top: 133%;
+			content: "";
+		}
+	}
+
+	&__swipe-elem {
+		position: absolute !important;
+		top: 0;
+		left: 0;
+		transform-origin: bottom center;
+		transition: transform .2s, opacity .2s ease .2s;
+
+		&--like {
+			z-index: 10;
+			transform: rotate(20deg);
+			opacity: 0;
+		}
+
+		&--dislike {
+			z-index: 10;
+			transform: rotate(-20deg);
+			opacity: 0;
+		}
+	}
 }

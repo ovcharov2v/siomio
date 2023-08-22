@@ -179,4 +179,56 @@
 		height: 100%;
 		transform: scaleY(-1);
 	}
+
+	&__swipe-panel {
+		position: absolute;
+		z-index: 1;
+		top: 8px;
+		left: 8px;
+		right: 8px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__swipe-like,
+	&__swipe-dislike {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		opacity: 0;
+		transition: opacity $transition-default;
+	}
+
+	&__swipe-like {
+		@include shadow;
+		background-color: $color-pink;
+		color: $color-white;
+
+		.page-notification__swipe-elem--like & {
+			opacity: 1;
+		}
+	}
+
+	&__swipe-dislike {
+		background-color: $color-white;
+
+		.page-notification__swipe-elem--dislike & {
+			opacity: 1;
+		}
+	}
+
+	&__swipe-icon {
+		.user__swipe-like & {
+			width: 30px;
+			height: 30px;
+		}
+
+		.user__swipe-dislike & {
+			width: 20px;
+			height: 20px;
+		}
+	}
 }
