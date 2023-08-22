@@ -1384,6 +1384,39 @@ input:focus, textarea:focus, button:focus {
           transform-origin: top center;
   margin-bottom: -200px; }
 
+.page-notification__swipe-container {
+  position: relative;
+  max-width: 343px;
+  margin: 0 auto; }
+  .page-notification__swipe-container::before {
+    display: block;
+    padding-top: 133%;
+    content: ""; }
+
+.page-notification__swipe-elem {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: bottom center;
+      -ms-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transition: opacity .2s ease .2s, -webkit-transform .2s;
+  transition: opacity .2s ease .2s, -webkit-transform .2s;
+  transition: transform .2s, opacity .2s ease .2s;
+  transition: transform .2s, opacity .2s ease .2s, -webkit-transform .2s; }
+  .page-notification__swipe-elem--like {
+    z-index: 10;
+    -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+            transform: rotate(20deg);
+    opacity: 0; }
+  .page-notification__swipe-elem--dislike {
+    z-index: 10;
+    -webkit-transform: rotate(-20deg);
+        -ms-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    opacity: 0; }
+
 .page-scroll__grid {
   display: -ms-grid;
   display: grid;
@@ -2053,6 +2086,51 @@ input:focus, textarea:focus, button:focus {
     -webkit-transform: scaleY(-1);
         -ms-transform: scaleY(-1);
             transform: scaleY(-1); }
+  .user__swipe-panel {
+    position: absolute;
+    z-index: 1;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .user__swipe-like, .user__swipe-dislike {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease; }
+  .user__swipe-like {
+    -webkit-box-shadow: 0 4px 8px rgba(211, 38, 38, 0.25);
+            box-shadow: 0 4px 8px rgba(211, 38, 38, 0.25);
+    background-color: #F75777;
+    color: #fff; }
+    .page-notification__swipe-elem--like .user__swipe-like {
+      opacity: 1; }
+  .user__swipe-dislike {
+    background-color: #fff; }
+    .page-notification__swipe-elem--dislike .user__swipe-dislike {
+      opacity: 1; }
+  .user__swipe-like .user__swipe-icon {
+    width: 30px;
+    height: 30px; }
+  .user__swipe-dislike .user__swipe-icon {
+    width: 20px;
+    height: 20px; }
 
 .action-panel {
   position: relative;

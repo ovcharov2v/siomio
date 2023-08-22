@@ -210,6 +210,46 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/_page-notification.js":
+/*!*************************************************!*\
+  !*** ./src/js/components/_page-notification.js ***!
+  \*************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_0__);
+
+document.addEventListener('DOMContentLoaded', function () {
+  var container = document.querySelector('.page-notification__swipe-container');
+  if (!container) return;
+  var manager = new hammerjs__WEBPACK_IMPORTED_MODULE_0___default.a.Manager(container);
+  var Swipe = new hammerjs__WEBPACK_IMPORTED_MODULE_0___default.a.Swipe();
+  manager.add(Swipe);
+  manager.on('swipe', function (e) {
+    var direction = e.offsetDirection;
+    var elems = container.querySelectorAll('.page-notification__swipe-elem:not(.page-notification__swipe-elem--like):not(.page-notification__swipe-elem--dislike)');
+    if (elems.length) {
+      var el = elems[elems.length - 1];
+      if (direction === 8) {
+        el.classList.add('page-notification__swipe-elem--like');
+        setTimeout(function () {
+          el.remove();
+        }, 400);
+      } else if (direction === 16) {
+        el.classList.add('page-notification__swipe-elem--dislike');
+        setTimeout(function () {
+          el.remove();
+        }, 400);
+      }
+    }
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/_page-photo.js":
 /*!******************************************!*\
   !*** ./src/js/components/_page-photo.js ***!
@@ -299,11 +339,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 document.addEventListener('DOMContentLoaded', function () {
-  var photoSlider = document.querySelector('.user__slider');
-  if (!photoSlider) return;
-  new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](photoSlider, {
-    slidesPerView: 1,
-    loop: true
+  var photoSliderList = document.querySelectorAll('.user__slider');
+  if (!photoSliderList.length) return;
+  photoSliderList.forEach(function (photoSlider) {
+    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](photoSlider, {
+      slidesPerView: 1,
+      loop: true
+    });
   });
 });
 
@@ -351,6 +393,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_action_panel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/_action-panel */ "./src/js/components/_action-panel.js");
 /* harmony import */ var _components_action_panel__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_action_panel__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_page_tariffs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_page-tariffs */ "./src/js/components/_page-tariffs.js");
+/* harmony import */ var _components_page_notification__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_page-notification */ "./src/js/components/_page-notification.js");
+
 
 
 
