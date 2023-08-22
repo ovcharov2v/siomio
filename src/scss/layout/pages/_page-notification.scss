@@ -49,16 +49,15 @@
 		margin-bottom: -200px;
 	}
 
+	&__swipe-grid {
+		display: grid;
+		grid-row-gap: 16px;
+	}
+
 	&__swipe-container {
 		position: relative;
 		max-width: 343px;
 		margin: 0 auto;
-
-		&::before {
-			display: block;
-			padding-top: 133%;
-			content: "";
-		}
 	}
 
 	&__swipe-elem {

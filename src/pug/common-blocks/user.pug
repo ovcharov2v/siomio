@@ -6,7 +6,7 @@ mixin user(showText=false, showShortText=false, showTags=false, labelType=false,
 		- userClass = 'user--scaled'
 	.user(class=userClass)&attributes(attributes)
 		.user__photo-box
-			if !scaled
+			if !scaled && !haveSwipePanel
 				.swiper.user__slider
 					.swiper-wrapper
 						if photo === "woman"
@@ -14,7 +14,7 @@ mixin user(showText=false, showShortText=false, showTags=false, labelType=false,
 							img.user__photo.swiper-slide(src="images/search-photo2.jpg", alt)
 						if photo === "man-with-dog"
 							img.user__photo(src="images/photo-man-and-dog.jpg", alt)
-			if scaled
+			if scaled || haveSwipePanel
 				if photo === "woman"
 					img.user__photo(src="images/search-photo1.jpg", alt)
 				if photo === "man"
