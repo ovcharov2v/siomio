@@ -1384,14 +1384,15 @@ input:focus, textarea:focus, button:focus {
           transform-origin: top center;
   margin-bottom: -200px; }
 
+.page-notification__swipe-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 16px; }
+
 .page-notification__swipe-container {
   position: relative;
   max-width: 343px;
   margin: 0 auto; }
-  .page-notification__swipe-container::before {
-    display: block;
-    padding-top: 133%;
-    content: ""; }
 
 .page-notification__swipe-elem {
   position: absolute !important;

@@ -223,28 +223,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_0__);
 
 document.addEventListener('DOMContentLoaded', function () {
-  var container = document.querySelector('.page-notification__swipe-container');
-  if (!container) return;
-  var manager = new hammerjs__WEBPACK_IMPORTED_MODULE_0___default.a.Manager(container);
-  var Swipe = new hammerjs__WEBPACK_IMPORTED_MODULE_0___default.a.Swipe();
-  manager.add(Swipe);
-  manager.on('swipe', function (e) {
-    var direction = e.offsetDirection;
-    var elems = container.querySelectorAll('.page-notification__swipe-elem:not(.page-notification__swipe-elem--like):not(.page-notification__swipe-elem--dislike)');
-    if (elems.length) {
-      var el = elems[elems.length - 1];
-      if (direction === 8) {
-        el.classList.add('page-notification__swipe-elem--like');
-        setTimeout(function () {
-          el.remove();
-        }, 400);
-      } else if (direction === 16) {
-        el.classList.add('page-notification__swipe-elem--dislike');
-        setTimeout(function () {
-          el.remove();
-        }, 400);
+  var containerList = document.querySelectorAll('.page-notification__swipe-container');
+  if (!containerList.length) return;
+  containerList.forEach(function (container) {
+    var manager = new hammerjs__WEBPACK_IMPORTED_MODULE_0___default.a.Manager(container);
+    var Swipe = new hammerjs__WEBPACK_IMPORTED_MODULE_0___default.a.Swipe();
+    manager.add(Swipe);
+    manager.on('swipe', function (e) {
+      var direction = e.offsetDirection;
+      var elems = container.querySelectorAll('.page-notification__swipe-elem:not(.page-notification__swipe-elem--like):not(.page-notification__swipe-elem--dislike)');
+      if (elems.length) {
+        var el = elems[elems.length - 1];
+        if (direction === 4) {
+          el.classList.add('page-notification__swipe-elem--like');
+          setTimeout(function () {
+            el.classList.remove('page-notification__swipe-elem--like');
+          }, 400);
+        } else if (direction === 2) {
+          el.classList.add('page-notification__swipe-elem--dislike');
+          setTimeout(function () {
+            el.classList.remove('page-notification__swipe-elem--dislike');
+          }, 400);
+        }
       }
-    }
+    });
   });
 });
 
