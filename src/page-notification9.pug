@@ -16,12 +16,9 @@ block content
 			+svg("heart3")(class="page-notification__tab-icon")
 			span Вас лайкнули (5)
 	.page-notification__swipe-grid
-		- var n = 0
-		while n<10
-			.page-notification__swipe-container.page-notification__swipe-container--scrollpage
-				+user(false, true, false, false, false, false, 'woman', false, false, true)
-				+user(false, true, false, false, false, false, 'woman', false, false, true)(class="page-notification__swipe-elem page-notification__swipe-elem--scroll-page")
-			- n++
+		.page-notification__swipe-container.page-notification__swipe-container--scrollpage
+			+user(false, true, false, false, false, false, 'woman', false, false, true)
+			+user(false, true, false, false, false, false, 'woman', false, false, true)(class="page-notification__swipe-elem page-notification__swipe-elem--scroll-page")
 
 	+actionPanel()(class="page-notification__action-panel")
 
