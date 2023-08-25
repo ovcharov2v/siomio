@@ -344,10 +344,22 @@ document.addEventListener('DOMContentLoaded', function () {
   var photoSliderList = document.querySelectorAll('.user__slider');
   if (!photoSliderList.length) return;
   photoSliderList.forEach(function (photoSlider) {
-    new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](photoSlider, {
+    var slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](photoSlider, {
       slidesPerView: 1,
       loop: true
     });
+    var prevButton = photoSlider.parentNode.querySelector('.user__slider-nav-btn--prev');
+    var nextButton = photoSlider.parentNode.querySelector('.user__slider-nav-btn--next');
+    if (prevButton) {
+      prevButton.addEventListener('click', function () {
+        slider.slidePrev();
+      });
+    }
+    if (nextButton) {
+      nextButton.addEventListener('click', function () {
+        slider.slideNext();
+      });
+    }
   });
 });
 
