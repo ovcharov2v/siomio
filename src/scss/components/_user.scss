@@ -32,7 +32,8 @@
 		right: 0;
 		padding: 16px 24px;
 		background-color: rgba(#EBEBEB, .5);
-		backdrop-filter: blur(10px)
+		backdrop-filter: blur(10px);
+		border-radius: 0 0 34px 34px;
 	}
 
 	&__info-top-row {
@@ -230,6 +231,10 @@
 			width: 20px;
 			height: 20px;
 		}
+	}
+
+	&__slider {
+		border-radius: 34px;
 	}
 
 	&__slider-nav-box {
