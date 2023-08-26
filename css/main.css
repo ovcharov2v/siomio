@@ -2132,6 +2132,8 @@ input:focus, textarea:focus, button:focus {
   .user__swipe-dislike .user__swipe-icon {
     width: 20px;
     height: 20px; }
+  .user__slider {
+    border-radius: 34px; }
   .user__slider-nav-box {
     position: absolute;
     z-index: 1;
