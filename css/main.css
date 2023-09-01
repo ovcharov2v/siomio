@@ -790,7 +790,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 375px;
+  min-width: 360px;
   min-height: 100vh;
   padding-top: 52px;
   padding-bottom: 82px;
@@ -921,6 +921,7 @@ input:focus, textarea:focus, button:focus {
 
 .page-birthday__input {
   display: block;
+  width: 100%;
   padding: 26px 56px 12px 20px;
   border: none;
   font-size: 20px;
@@ -2228,7 +2229,10 @@ input:focus, textarea:focus, button:focus {
     overflow-x: auto;
     scrollbar-width: none; }
     .tag-list--one-line::-webkit-scrollbar {
-      width: 0; }
+      display: none;
+      width: 0;
+      height: 0;
+      -webkit-appearance: none; }
   .tag-list__elem {
     font-size: 11px;
     line-height: 16px;
