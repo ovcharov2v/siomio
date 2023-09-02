@@ -44,7 +44,6 @@
 	&__info-box {
 		position: absolute;
 		z-index: 1;
-		pointer-events: none;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -52,6 +51,8 @@
 		background-color: rgba(#EBEBEB, .5);
 		backdrop-filter: blur(10px);
 		border-radius: 0 0 34px 34px;
+		user-select: none;
+		cursor: pointer;
 	}
 
 	&__info-top-row {
@@ -61,7 +62,18 @@
 		margin-bottom: 8px;
 	}
 
+	&__info-bottom {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height .4s;
+
+		.user__info-box--expanded & {
+			max-height: 600px;
+		}
+	}
+
 	&__name {
+		margin-right: 12px;
 		font-size: 23px;
 		line-height: 27px;
 		font-weight: 500;
