@@ -1392,6 +1392,7 @@ input:focus, textarea:focus, button:focus {
 
 .page-notification__swipe-container {
   position: relative;
+  width: 100%;
   max-width: 343px;
   margin: 0 auto; }
 
@@ -1921,9 +1922,24 @@ input:focus, textarea:focus, button:focus {
   max-width: 343px;
   margin: 0 auto;
   overflow: hidden; }
+  .user__photo-box {
+    height: 100%; }
+  .user__photo-wrap {
+    position: relative;
+    background: #fbfbfb; }
+    .user__photo-wrap::before {
+      display: block;
+      padding-top: 133.5%;
+      content: ""; }
   .user__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
     width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
