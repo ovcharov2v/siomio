@@ -1953,7 +1953,6 @@ input:focus, textarea:focus, button:focus {
   .user__info-box {
     position: absolute;
     z-index: 1;
-    pointer-events: none;
     bottom: 0;
     left: 0;
     right: 0;
@@ -1961,7 +1960,12 @@ input:focus, textarea:focus, button:focus {
     background-color: rgba(235, 235, 235, 0.5);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
-    border-radius: 0 0 34px 34px; }
+    border-radius: 0 0 34px 34px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    cursor: pointer; }
   .user__info-top-row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1973,7 +1977,15 @@ input:focus, textarea:focus, button:focus {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 8px; }
+  .user__info-bottom {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height .4s;
+    transition: max-height .4s; }
+    .user__info-box--expanded .user__info-bottom {
+      max-height: 600px; }
   .user__name {
+    margin-right: 12px;
     font-size: 23px;
     line-height: 27px;
     font-weight: 500; }

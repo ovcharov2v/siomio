@@ -174,6 +174,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/components/_info-box.js":
+/*!****************************************!*\
+  !*** ./src/js/components/_info-box.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var infoBoxList = document.querySelectorAll('.user__info-box');
+  if (!infoBoxList.length) return;
+  infoBoxList.forEach(function (infoBox) {
+    infoBox.addEventListener('click', function () {
+      infoBox.classList.toggle('user__info-box--expanded');
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/components/_page-birthday.js":
 /*!*********************************************!*\
   !*** ./src/js/components/_page-birthday.js ***!
@@ -406,8 +425,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_page_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/_page-search */ "./src/js/components/_page-search.js");
 /* harmony import */ var _components_action_panel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/_action-panel */ "./src/js/components/_action-panel.js");
 /* harmony import */ var _components_action_panel__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_action_panel__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_page_tariffs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_page-tariffs */ "./src/js/components/_page-tariffs.js");
-/* harmony import */ var _components_page_notification__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_page-notification */ "./src/js/components/_page-notification.js");
+/* harmony import */ var _components_info_box__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_info-box */ "./src/js/components/_info-box.js");
+/* harmony import */ var _components_info_box__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_info_box__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_page_tariffs__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_page-tariffs */ "./src/js/components/_page-tariffs.js");
+/* harmony import */ var _components_page_notification__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_page-notification */ "./src/js/components/_page-notification.js");
+
 
 
 
