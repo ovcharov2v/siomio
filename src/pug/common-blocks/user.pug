@@ -10,19 +10,24 @@ mixin user(showText=false, showShortText=false, showTags=false, labelType=false,
 				.swiper.user__slider
 					.swiper-wrapper
 						if photo === "woman"
-							img.user__photo.swiper-slide(src="images/search-photo1.jpg", alt)
-							img.user__photo.swiper-slide(src="images/search-photo2.jpg", alt)
+							.user__photo-wrap.swiper-slide
+								img.user__photo(src="images/search-photo1.jpg", alt)
+							.user__photo-wrap.swiper-slide
+								img.user__photo(src="images/search-photo2.jpg", alt)
 						if photo === "man-with-dog"
-							img.user__photo(src="images/photo-man-and-dog.jpg", alt)
+							.user__photo-wrap
+								img.user__photo(src="images/photo-man-and-dog.jpg", alt)
 				if haveSwipePanel
 					.user__slider-nav-box
 						button.user__slider-nav-btn.user__slider-nav-btn--prev
 						button.user__slider-nav-btn.user__slider-nav-btn--next
 			if scaled
 				if photo === "woman"
-					img.user__photo(src="images/search-photo1.jpg", alt)
+					.user__photo-wrap
+						img.user__photo(src="images/search-photo1.jpg", alt)
 				if photo === "man"
-					img.user__photo(src="images/search-photo3.jpg", alt)
+					.user__photo-wrap
+						img.user__photo(src="images/search-photo3.jpg", alt)
 			if labelType !== false
 				p.user__label(class=(labelType==="type4"?"user__label--circle":""))
 					if labelType==="type1"
