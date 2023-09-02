@@ -1926,7 +1926,8 @@ input:focus, textarea:focus, button:focus {
     height: 100%; }
   .user__photo-wrap {
     position: relative;
-    background: #fbfbfb; }
+    background: #fbfbfb;
+    width: 100%; }
     .user__photo-wrap::before {
       display: block;
       padding-top: 133.5%;
