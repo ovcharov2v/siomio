@@ -4,7 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	if(!photoSlider) return
 
 	new Swiper(photoSlider, {
-		slidesPerView: 2,		centeredSlides: true,
+		slidesPerView: 2,
+		centeredSlides: true,
 		initialSlide: 1,
 		slideActiveClass: 'page-tariffs__slide-box--active'
 	});
