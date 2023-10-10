@@ -23,40 +23,33 @@ block content
 		.page-tariffs__description
 			+svg("filter")(class="page-tariffs__description-icon")
 			p.page-tariffs__description-text Выключите рекламу. Ничего не будет отвлекать.
-	.swiper.page-tariffs__slider
-		.swiper-wrapper
-			// Slide
-			.swiper-slide
-				.page-tariffs__slide.page-tariffs__slide--bg1
-					.page-tariffs__slide-content
-						+svg("crown2")(class="page-tariffs__slide-crown")
-						.page-tariffs__slide-center
-							p.page-tariffs__slide-value 1
-							p.page-tariffs__slide-time месяц
-						.page-tariffs__slide-bottom
-							p.page-tariffs__slide-price 1490 P/мес.
-			// Slide
-			.swiper-slide
-				.page-tariffs__slide.page-tariffs__slide--bg2
-					.page-tariffs__slide-content
-						+svg("crown2")(class="page-tariffs__slide-crown")
-						.page-tariffs__slide-center
-							p.page-tariffs__slide-value 6
-							p.page-tariffs__slide-time месяцев
-						.page-tariffs__slide-bottom
-							p.page-tariffs__slide-discount -20%
-							p.page-tariffs__slide-price 965 P/мес.
-			// Slide
-			.swiper-slide
-				.page-tariffs__slide.page-tariffs__slide--bg3
-					.page-tariffs__slide-content
-						+svg("crown2")(class="page-tariffs__slide-crown")
-						.page-tariffs__slide-center
-							p.page-tariffs__slide-value 12
-							p.page-tariffs__slide-time месяцев
-						.page-tariffs__slide-bottom
-							p.page-tariffs__slide-discount -35%
-							p.page-tariffs__slide-price 1490 P/мес.
+	.page-tariffs__tariff-grid
+			// Tariff
+			.page-tariffs__tariff.page-tariffs__tariff--bg1
+				+svg("crown2")(class="page-tariffs__tariff-crown")
+				.page-tariffs__tariff-center
+					p.page-tariffs__tariff-value 1
+					p.page-tariffs__tariff-time день
+				.page-tariffs__tariff-bottom
+					p.page-tariffs__tariff-price 199 P/день.
+			// Tariff
+			.page-tariffs__tariff.page-tariffs__tariff--center.page-tariffs__tariff--hot.page-tariffs__tariff--bg2
+				+svg("crown2")(class="page-tariffs__tariff-crown")
+				.page-tariffs__tariff-center
+					p.page-tariffs__tariff-value 30
+					p.page-tariffs__tariff-time дней
+				.page-tariffs__tariff-bottom
+					p.page-tariffs__tariff-discount 13,3 руб в день!
+					p.page-tariffs__tariff-price 399 P/мес.
+			// Tariff
+			.page-tariffs__tariff.page-tariffs__tariff--bg3
+				+svg("crown2")(class="page-tariffs__tariff-crown")
+				.page-tariffs__tariff-center
+					p.page-tariffs__tariff-value 365
+					p.page-tariffs__tariff-time дней
+				.page-tariffs__tariff-bottom
+					p.page-tariffs__tariff-discount 14,1 руб в день!
+					p.page-tariffs__tariff-price 1500 P/мес.
 
 	.page-tariffs__buttons-grid
 		button.button.button--pink-light.button--small-text Отмена
